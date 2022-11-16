@@ -9,13 +9,19 @@
 Console.Write("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number > 999 || number < 100)
+if (number > 99 && number < 1000)
 {
-    Console.Write("Введенное число не трехзначное");
+ int number1 = number % 100;
+    int finishNumber = number1 / 10;
+    Console.Write(finishNumber);
+}
+else if (number < -100 && number > -1000)
+{
+    int number1 = (-1)*(number % 100);
+    int finishNumber = number1 / 10;
+    Console.Write(finishNumber);
 }
 else
 {
-    int number1 = number % 100;
-    int finishNumber = number1 / 10;
-    Console.Write(finishNumber);
+    Console.Write("Введенное число не является трехзначным");
 }
