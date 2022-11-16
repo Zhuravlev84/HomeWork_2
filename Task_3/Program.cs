@@ -6,7 +6,7 @@
 7 -> да
 1 -> нет */
 
-Console.Write("Введите число дня недели: ");
+WriteOn("Введите число дня недели: ");
 int number1 = Convert.ToInt32(Console.ReadLine());
 if (number1 == 1 || number1 == 2 || number1 == 3 || number1 == 4 
 || number1 == 5)
