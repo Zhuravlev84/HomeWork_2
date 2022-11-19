@@ -7,26 +7,25 @@
 
 32679 -> 6 */
 
-Console.Write ("Введите число: ");
-int number = Convert.ToInt32 (Console.ReadLine());
-if (number > 99 && number < 1000)
+int number = ReadInt ("Введите число: ");
+
+int numberLimit = 3;
+int temp = number;
+int a = 0;
+while (temp > 0)
 {
-    int number1 = number % 10;
-    Console.Write(number1);
+    temp = temp/10;
+    a++;
 }
-else if (number > 999 && number < 10000)
+while (a > numberLimit)
 {
-    int number1 = number % 100;
-    int finishNumber = number1 / 10;
-    Console.Write(finishNumber);
+    number = number/10;
+    a = a - 1;
 }
-else if (number > 9999 && number < 100000)
-{
-    int number1 = number % 1000;
-    int finishNumber = number1 / 100;
-    Console.Write(finishNumber);
-}
-else
-{
-    Console.Write ("Третьей цифры нет");
+Console.Write(number%10);
+
+int ReadInt (string messege)
+{   
+    Console.Write (messege);
+    return Convert.ToInt32 (Console.ReadLine());
 }
